@@ -1,1 +1,9 @@
 **Learning R with Coursera DA Course. All work is my own, based on what I have learned from the course**
+
+Notes: Available demo packages in RGui per demo(package = .packages(all.available = TRUE))
+1. 'grDevices': colors, hclColors
+2. 'lattice': intervals, labels, lattice, panel
+3. 'stats': glm.vr, lm.glm, nlm, smooth 
+4. 'tcltk': tkcanvas, tkdensity, tkfaq, tkttest
+
+
