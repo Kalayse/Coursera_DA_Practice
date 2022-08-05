@@ -9,3 +9,11 @@ Notes: Available demo packages in RGui per demo(package = .packages(all.availabl
 
 RStudio:
 If you want more information about a function - ?function() > execute, will yield information on it.
+
+Basics:
+- Function(argument)
+- To assign a variable, stick with one syntax type for consistency. 
+    The one used in course is as follows: first_variable <- "What the value of the first variable represents". 
+    Note: The output will appear in the Environments pane with the Value being first_variable and print of "What the value of the first variable represents". 
+    To do: Try this in other methods with fucntions to see how the output table looks.
+    
