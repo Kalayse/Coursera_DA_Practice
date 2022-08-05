@@ -1,0 +1,30 @@
+#Here's an example of a variable.
+first_variable <- "This is my variable."
+second_variable <- 12.5
+vec_logical
+print("Attempting to learn Atomic Vectors")
+vec_people <- c("Aelin", "Rowan", "Manon")
+#line6, assigning variable name for character comvbine function.
+typeof(c("a", "b"))
+#line 8, what is the data element for atomic vector combine, yields results
+#that the data element is "character"
+typeof(c(TRUE, FALSE, TRUE))
+#line 11, finding data element for atomic vector combine of "logical"
+length(vec_people)
+#line 13, using a previously assinged variable of vec_people and function length()
+#we are yielded result of 3 (as in 3 entries in vector vec_people)
+names(second_variable) <- c(TRUE)
+#line16, renamed second_variable vector content from 12.5 to TRUE using names function.
+#this won't change it in the environments table, but will display name and rename when 
+#pulling second_variable.
+second_variable
+str(list("Rowan", 2L, TRUE, TRUE, 5.5))
+#line21, the str() function will describe the structure of the list in a broken down format.
+#It will be the total count followed by a list of the data element and then the value.
+#By adding list_tog, it is now added to environment pane under new table heading, Data.
+str(list_tog)
+#line25 will show the structure of the new list that is committed list_tog.
+tog_books <- list("Throne of Glass", "Crown of Midnight", "Heir of Fire")
+names(tog_books) <- list("Throne of Glass" = 1, "Crown of Midnight" = 2, "Heir of Fire" = 3)
+#line27, commits the list.
+#line28, renames the content within commited list tog_books to include other data elements.
