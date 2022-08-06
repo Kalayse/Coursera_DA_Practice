@@ -27,4 +27,19 @@ str(list_tog)
 tog_books <- list("Throne of Glass", "Crown of Midnight", "Heir of Fire")
 names(tog_books) <- list("Throne of Glass" = 1, "Crown of Midnight" = 2, "Heir of Fire" = 3)
 #line27, commits the list.
-#line28, renames the content within commited list tog_books to include other data elements.
+#line28, renames the content within committed list tog_books to include other data elements.
+#when using tidyverse or lubridate package, once they are installed load the packages for
+#each R session with library function. library(tidyverse) then library(lubridate)
+mdy_hm("10/27/2017 04:30")
+#when using this make sure each section of the function has an associated value within the argument.
+#the following will all yield results without an error, note: ensure that you have the correct
+#maximum value in each argument, because otherwise it will error. Additionally, you have to make sure that you have
+#the timespans listed from largest to smallest, eg. you can't have seconds without minutes and hours.
+ymd_hms("1985-04-30 07:01:59")
+ymd_hms("19850430 070159")
+ymd_hm("19850430 0159")
+#when making data frames, you will be naming the columns in order from left to right with each entry. 
+#you can use combines function or previously named tables.
+data.frame(Col_1 = vec_logical, Col_2 = vec_people)
+#line43 - yields a 2 column 3 row table that includes column labels Col_1 and Col_2.
+#based on this function structure, the rows have to have equal amounts of values. It will not add nulls.
