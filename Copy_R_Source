@@ -43,3 +43,5 @@ ymd_hm("19850430 0159")
 data.frame(Col_1 = vec_logical, Col_2 = vec_people)
 #line43 - yields a 2 column 3 row table that includes column labels Col_1 and Col_2.
 #based on this function structure, the rows have to have equal amounts of values. It will not add nulls.
+if (x>0) {print("x is a positive number")} else {print("x is negative number or zero")}
+#if (condition) then {execute expr1} else/otherwise {execute expr2}
