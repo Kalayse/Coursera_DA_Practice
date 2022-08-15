@@ -26,3 +26,15 @@ run code in order to make it available as part of your R-Session.
     library(readxl) ##to use tidyverse readxl package
     Dataset_Name_in_R <- read_excel("Path within RStudio/to access/Uploaded Dataset.xlsx")
     View(Dataset_Name_in_R)
+    
+Data Frame Editing, Basics:
+To create new variables in the dataframe:
+    mutate( ) function, only to the new dataframe and not the imported one.
+    mutate(new_dataframe_name, [what’s being mutated])
+To rename columns:
+    rename(data_frame, “New_Name” = Old_Name)
+        Rename multiple with a comma after the first one.
+        R will output a tibble in the console.
+        Assign it a new variable to keep it for reference.
+Use colnames(data_frame) to figure out the names of the columns you want to rename.
+
