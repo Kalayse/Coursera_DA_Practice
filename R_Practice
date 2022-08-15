@@ -17,3 +17,12 @@ Basics:
     Note: The output will appear in the Environments pane with the Value being first_variable and print of "What the value of the first variable represents". 
     To do: Try this in other methods with fucntions to see how the output table looks.
     
+Uploading Datasets:
+- To use a dataset that you have downloaded on your PC. You will first have to add it as part of the project within RStudio. 
+Utilize the bottom right pane Files > Upload > Select location where you want the dataset to be housed.
+- Once the dataset is uploaded within RStudio it becomes available to be used as part of your R-Session. This means that you will have
+run code in order to make it available as part of your R-Session.
+- Example of code needed for an xls or xlsx file type:
+    library(readxl) ##to use tidyverse readxl package
+    Dataset_Name_in_R <- read_excel("Path within RStudio/to access/Uploaded Dataset.xlsx")
+    View(Dataset_Name_in_R)
