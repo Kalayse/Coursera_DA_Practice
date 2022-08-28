@@ -1,0 +1,32 @@
+#Working with data.frames penguins and diamonds.
+
+ggplot(data=desc_bill_length) + geom_smooth(mapping = aes(x=bill_length_mm, y=body_mass_g), color="green")
+ggplot(data=desc_bill_length) + 
+  geom_jitter(mapping = aes(x=bill_length_mm, y=body_mass_g, shape=species, alpha=species), color="red")
+ggplot(desc_bill_length, aes(x=bill_length_mm, y=body_mass_g, shape=species, size=species)) +
+  geom_point()
+ggplot(data=desc_bill_length) + 
+  geom_point(mapping = aes(x=bill_length_mm, y=body_mass_g, shape=species, alpha=species), color="blue") +
+  geom_smooth(mapping = aes(x=bill_length_mm, y=body_mass_g, color = "orange"))
+ggplot(data=desc_bill_length) + 
+  geom_point(mapping = aes(x=bill_length_mm, y=body_mass_g, shape=species, alpha=species), color="blue") +
+  geom_smooth(mapping = aes(x=bill_length_mm, y=body_mass_g, color = "orange", linetype=species))
+#above is using the penguins dataset with an assigned data.frame of desc_bill_length.
+ggplot(data=diamonds)+
+  geom_bar(mapping=aes(x=cut, fill=clarity))
+#Above, geom_bar one variable
+ggplot(data=desc_bill_length)+
+  geom_point(mapping=aes(x=bill_length_mm, y=body_mass_g))+
+  geom_smooth(mapping=aes(x=bill_length_mm, y=body_mass_g), method="loess")
+#Above: smoothing method with more than 1000 variables. Combining 2 plot types.
+ggplot(data=penguins)+
+  geom_point(mapping=aes(x=flipper_length_mm,y=body_mass_g,color=species))+
+  facet_wrap(~species)
+ggplot(data=diamonds)+
+  geom_bar(mapping=aes(x=color,fill=cut))+
+  facet_wrap(~cut)
+#Above: Using facet_wrap
+ggplot(data=penguins)+
+  geom_point(mapping=aes(x=flipper_length_mm,y=body_mass_g,color=species))+
+  facet_grid(sex~species)
+#Above: facet_grid with two variables. Splits the plot into multiple vertical_attribute1 and horitzontal_attribute2
