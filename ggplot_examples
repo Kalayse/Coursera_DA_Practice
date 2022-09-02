@@ -34,3 +34,20 @@ ggplot(data=penguins)+
   geom_point(mapping=aes(x=flipper_length_mm,y=body_mass_g,color=species))+
   facet_grid(sex~species)
 #Above: facet_grid with two variables. Splits the plot into multiple vertical_attribute1 and horitzontal_attribute2
+
+ggplot(data=OrchardSprays)+
+  geom_point(mapping=aes(x=treatment, y=colpos, color=colpos))+
+  facet_wrap(~colpos)+
+  theme(axis.text.x=element_text(angle=45))
+#Abp=ove: Angle text, facet_wrap
+
+penguins %>% 
+  filter(year>2007) %>% 
+  ggplot()+
+  geom_point(mapping=aes(x=flipper_length_mm,y=body_mass_g,color=species))+
+  geom_smooth(mapping=aes(x=flipper_length_mm,y=body_mass_g,color=species, method="loess"))+
+  facet_wrap(~species)+
+  labs(title = "Post 2007 Penguin Counts", subtitle = "For Islands: Torgenson, Biscoe, & Dream", caption = "Data collect by Dr. K. Gorman")
+#Above: piping with two geoms, facet_wrap, and labels.
+  
+
