@@ -49,5 +49,20 @@ penguins %>%
   facet_wrap(~species)+
   labs(title = "Post 2007 Penguin Counts", subtitle = "For Islands: Torgenson, Biscoe, & Dream", caption = "Data collect by Dr. K. Gorman")
 #Above: piping with two geoms, facet_wrap, and labels.
-  
+ 
+ penguins %>% 
+  filter(year==2007) %>% 
+  ggplot()+
+  geom_point(mapping=aes(x=flipper_length_mm,y=body_mass_g,color=species))+
+  facet_wrap(~species)
+#Above: example of piping, filtering with dplyr, and ggplot
+
+Total_Count_Plot <- penguins %>% 
+  ggplot()+ 
+  geom_bar(mapping=aes(x=sex, fill=species))+
+  labs(title = "Total Penguin Count", subtitle = "Adelie, Chinstrap, & Gentoo") +
+  annotate("text", x = "NA", y=100, label = "All Chinstraps have reported sex.", size = 3.0, angle=35)
+Total_Count_Plot +
+  labs(caption = "Data collected by Dr. K Gorman")
+#Adding annotations, plots as variables, and labels to a plot.
 
